@@ -40,9 +40,7 @@ python Ground_truth.py
 ```
 Note: There is NO multi-GPU/parallelling training in our codes. 
 
-The trained models and all figures are saved in ```Results```.
-
-Please refer to ```readme.md``` in each fold for more details.
+The trained models and all figures are saved in ```Results```. Please refer to ```readme.md``` in the ```Results``` fold for more details.
 
 ## Citation
 ```
