@@ -19,19 +19,28 @@ pip install requirements.txt
 All the data for experiments can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1U4RE0EGJgCrL_LJvFmMf_LiXID7o4P38?usp=sharing).
 
 ### Reproduction
-To reproduce the experiments of the proposed method, please run
+To reproduce the experiments of the proposed methods and comparisons ('Lat_MB', 'Lat_MF', 'Ori_MB', and 'Ori_MF'), please run
 ```
 cd Codes/
-python Archive_Model_ODE_OPT_Grad.py
+python Lat_MB.py
+python Lat_MF.py
+python Ori_MB.py
+python Ori_MF.py
 ```
-To reproduce the experiments of generating initial models and comparisons, please run
+To reproduce the experiments of generating latent and original models, please run
 ```
 cd Codes/
-python Archive_Model_ODE_then_OPT.py
+python Lat_model.py
+python Ori_model.py
+```
+To reproduce the experiments of ground-truth results, please run
+```
+cd Codes/
+python Ground_truth.py
 ```
 Note: There is NO multi-GPU/parallelling training in our codes. 
 
-The models and logs are saved in ```Results/Archive_NNfile/```, and the case results are saved in ```Results/Archive_Results/```.
+The trained models and all figures are saved in ```Results```.
 
 Please refer to ```readme.md``` in each fold for more details.
 
