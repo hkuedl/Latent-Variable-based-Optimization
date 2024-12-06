@@ -1,6 +1,6 @@
 # Latent-Variable-based-Optimization
 
-_This work proposes a decision-oriented modeling method for building thermal dynamics. The model parameters are updated through an end-to-end gradient-based training strategy wherein the downstream optimization is used as the loss function._
+_This work proposes a novel method for multi-zone optimization of TCLs with latent variables. A multi-task learning based framework is formulated to learn latent variables and models that represent the time-coupled relationship. Both model-based and model-free algorithms are proposed to solve the latent variable-based optimization problem._
 
 Codes for submitted Paper "XXXXX".
 
