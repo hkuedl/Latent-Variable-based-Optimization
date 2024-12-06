@@ -1,17 +1,14 @@
-## File description in ```Archive_NNfile```
-```XXX_loss_opt```: iterative objective-related losses of the proposed method.
+## File description
+```90_full_AE_ind_P/X/Y.pt```: the AE model trained for action, disturbance, and state latent variables, respectively.
 
-```XXX_loss_phy```: iterative physics-related losses of the proposed method.
+```90_full_Model_ind_Y_lin.pt```: the trained latent model as a warm start.
 
-```pretrain_opt_XXX_new.pt```: trained models of the proposed method.
+```90_full_Model_joint_lin.pt```: the final and determined latent model of the proposed method.
 
-```pretrain_phy_XXX.pt```: initial models (i.e., MTO). 
+```90_whole_Lin.pt```: the trained model with original variables, served as the model in 'Ori_MB'.
 
-## File description in ```Archive_Results```
-```XXX_convergence_new.pdf```: figures for iterative losses.
+```90_whole_NN.pt```: the assumed ground-truth model to represent the real thermal dynamics.
 
-```XXX_convergence_par_new.pdf```: figures for iterative objectives.
+```HZ_AE_P.npy```: the initial solutions of decision variables for the ground-truth optimization.
 
-```XXX_tem_q_new.xlsx```: optimization results with the model trained with the proposed method.
-
-```XXX_tem_q_ori_new.xlsx```: optimization results with the model trained with MTO.
+```XXX.pdf```: all figures in the case study.
