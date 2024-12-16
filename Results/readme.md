@@ -3,7 +3,7 @@
 
 ```90_full_Model_ind_Y_lin.pt```: the trained latent model as a warm start.
 
-```90_full_Model_joint_lin.pt```: the final and determined latent model of the proposed method.
+```90_full_Model_joint_lin.pt```: the final and determined latent model of the proposed method in 'Lat_MB'.
 
 ```90_whole_Lin.pt```: the trained model with original variables, served as the model in 'Ori_MB'.
 
