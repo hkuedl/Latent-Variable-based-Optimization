@@ -1,8 +1,8 @@
 # Latent-Variable-based-Optimization
 
-_This work proposes a novel method for multi-zone optimization of TCLs with latent variables. A multi-task learning based framework is formulated to learn latent variables and models that represent the time-coupled relationship. Both model-based and model-free algorithms are proposed to solve the latent variable-based optimization problem._
+_This work proposes a novel method for multi-zone optimization of TCLs with latent variables. A multi-task learning based framework is formulated to learn latent variables and models representing the time-coupled relationship. Model-based and model-free algorithms are proposed to solve the latent variable-based optimization problem._
 
-Codes for submitted Paper "XXXXX".
+Codes for submitted Paper "High-dimensional Optimization of Multi-zone Thermostatically Controlled Loads with Latent Variables".
 
 Authors: Xueyuan Cui, Yi Wang, and Bolun Xu.
 
