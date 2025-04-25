@@ -80,7 +80,7 @@ Z_tr_new,Z_te_new = np.hstack((Y_tr_new,Z_tr[:,nn_zone:])),np.hstack((Y_te_new,Z
 S_Z_tr_new,S_Z_te_new = np.hstack((S_Y_tr_new,S_Z_tr[:,nn_zone:])),np.hstack((S_Y_te_new,S_Z_te[:,nn_zone:]))
 
 
-#%%  看敏感度
+#%%  
 import time
 
 def AE_testing(J_model_sta_1,S_Y_tr,S_Y_te,SS_Y):
@@ -120,7 +120,7 @@ def model_output(model,en_x0,en_x1,en_x2):
     return u_y_de
 
 opt_period = 24*T_Fre
-c_0_price = np.loadtxt("/mnt/ExtraDisk/cxy/Building_MPC/Data_price/data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
+c_0_price = np.loadtxt("data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
 
 c_period_train,c_period_test = int((Train_e-Train_s)/opt_period),int((Train_e2-Train_s2)/opt_period)
 

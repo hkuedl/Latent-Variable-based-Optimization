@@ -84,7 +84,7 @@ M_linear = 0
 M_model = MZ_Model_Func.model_FNN(M_nn_input, M_nn_hidden, M_nn_output,M_linear).to(device)
 
 
-# #%%  读取模型参数
+# #%%  
 if M_linear == 0:
     m_state_dict = torch.load('Results/'+str(nn_zone)+'_whole_NN.pt')
 elif M_linear == 1:
@@ -95,13 +95,13 @@ model_para = []
 for name, params in M_model.state_dict().items():
     model_para.append(to_np(params))
 
-#% 优化
+#% 
 import time
 predict_period = T_Fre*24
 M_train_data,M_train_label = MZ_Model_Func.model_data(S_X_tr,S_P_tr,S_Y_tr_new, predict_period)
 M_test_data,M_test_label = MZ_Model_Func.model_data(S_X_te,S_P_te,S_Y_te_new, predict_period)
 
-c_0_price = np.loadtxt("/mnt/ExtraDisk/cxy/Building_MPC/Data_price/data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
+c_0_price = np.loadtxt("data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
 c_period_train,c_period_test = int((Train_e-Train_s)/predict_period),int((Train_e2-Train_s2)/predict_period)
 
 c_price = np.zeros((c_period_train+c_period_test,predict_period))

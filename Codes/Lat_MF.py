@@ -125,10 +125,10 @@ def u_obj(J_tr_en_P,M_model_deter,J_tr_de_Y,M_model,S_Z_tr_ini,SS_Y,SS_P):
     J_tr_de_p_hy = SS_P.inverse_transform(to_np(J_tr_de_P))
     return J_tr_de_s_hy,J_tr_de_p_hy
 
-#%%  看敏感度
+#%%  
 import time
 opt_period = 24*T_Fre
-c_0_price = np.loadtxt("/mnt/ExtraDisk/cxy/Building_MPC/Data_price/data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
+c_0_price = np.loadtxt("data_2023.csv",delimiter=",",skiprows=1,usecols=range(1, 16))[::int(12/T_Fre),:][Train_s:Train_e2,9]
 
 c_period_train,c_period_test = int((Train_e-Train_s)/opt_period),int((Train_e2-Train_s2)/opt_period)
 
@@ -215,7 +215,7 @@ for i_day in range(0,1):
             J_AE = sum(ae_output_num)
             Iter_obj = np.zeros((Iters3,4))
             Iter_obj = pd.DataFrame(Iter_obj,columns = ['Obj.pow','Obj.tem','Power_pen','Sum_Obj'])
-            Iter_obj_zero = np.zeros((Iters3,4))  #用来存放扰动后的目标值的numpy
+            Iter_obj_zero = np.zeros((Iters3,4))  
             Iter_sens_grd = torch.zeros((Iters3,opt_period,ae_output_num[1])).to(device)
             Iter_J_tr_en = torch.zeros((Iters3,opt_period,J_AE)).to(device)
             for i in range(Iters3):

@@ -86,8 +86,8 @@ def getdata(batch_step_bei, T_Fre, S_input_tr, FF, input):
 def data_input(T_Fre,Train_s,Train_e,Train_s2,Train_e2,Train_s3,Train_e3,N_zone,P_dele,pattern):
     T_len = 8760*T_Fre
     if N_zone == 90:
-        data_in = np.loadtxt("/mnt/ExtraDisk/cxy/Building_MPC/Data_building/90zone_15min.csv",delimiter=",",skiprows=1,usecols=range(1,5*N_zone+2))
-        data_in_new = np.loadtxt("/mnt/ExtraDisk/cxy/Building_MPC/Data_building/90zone_15min_newpattern.csv",delimiter=",",skiprows=1,usecols=range(1,5*N_zone+2))
+        data_in = np.loadtxt("90zone_15min.csv",delimiter=",",skiprows=1,usecols=range(1,5*N_zone+2))
+        data_in_new = np.loadtxt("90zone_15min_newpattern.csv",delimiter=",",skiprows=1,usecols=range(1,5*N_zone+2))
     P0,T_in0 = np.zeros((T_len,N_zone)),np.zeros((T_len,N_zone))
     T_rad0 = data_in[:,1+N_zone*1:1+N_zone*2]/1000
     for ii in range(N_zone):
@@ -104,7 +104,6 @@ def data_input(T_Fre,Train_s,Train_e,Train_s2,Train_e2,Train_s3,Train_e3,N_zone,
         T_in0_new[:,ii] = data_in_new[:,1+N_zone*2+3*ii]
     T_o0_new = data_in_new[:,0].reshape(-1,1)
     T_occ0_new = data_in_new[:,1:1+N_zone*1].copy()/1000
-
 
     if len(P_dele) > 0:
         P0 = np.delete(P0, P_dele, axis=1)  
