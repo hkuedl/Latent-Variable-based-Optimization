@@ -44,4 +44,14 @@ The trained models and all figures are saved in ```Results```. Please refer to `
 
 ## Citation
 ```
+@ARTICLE{11037228,
+  author={Cui, Xueyuan and Wang, Yi and Xu, Bolun},
+  journal={IEEE Transactions on Smart Grid}, 
+  title={Dimension-Reduced Optimization of Multi-Zone Thermostatically Controlled Loads}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Optimization;Buildings;Accuracy;Computational modeling;Temperature control;Dimensionality reduction;Aggregates;Multitasking;Heuristic algorithms;HVAC;Building energy system;thermostatically controlled loads;dimension reduction;auto-encoder},
+  doi={10.1109/TSG.2025.3579778}}
 ```
